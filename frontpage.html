@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <title>Cafind</title>
+    <link rel="icon" href="./photo/coffeeicon.png">
+    <link rel="stylesheet" href="./homestyle.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-bar">
+            <!-- 左邊：漢堡選單圖示 -->
+            <div class="nav-left">
+                <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
+            </div>
+
+            <!-- 中間：logo -->
+            <div class="nav-center">
+                <a href="#logo">Logo</a>
+            </div>
+
+            <!-- 右邊：放大鏡-->
+            <div class="nav-right">
+                <img src="./photo/searchicon.png" alt="Search" class="search-icon" onclick="submitSearch()">
+                <div id="search-box" class="search-box">
+                    <input type="text" placeholder="Search..." onkeydown="checkEnter(event)" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 隱藏的漢堡選單 -->
+    <ul id="menu" class="hidden">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Cafind</h1>
+        </header>
+        <div>
+            <h2>Find your kind of café.</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
