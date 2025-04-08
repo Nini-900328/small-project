@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <title>Cafind-Liked List</title>
+  <link rel="icon" href="./photo/Logoicon2.png">
+  <link rel="stylesheet" href="./homestyle.css">
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-bar">
+      <div class="nav-left">
+        <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
+      </div>
+      <div class="nav-center">
+        <a href="/homepage.html">
+          <img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
+        </a>
+      </div>
+      <div class="nav-right">
+        <img src="./photo/searchicon.png" alt="Search" class="search-icon" onclick="submitSearch()">
+        <div id="search-box" class="search-box">
+          <input type="text" placeholder="Search..." onkeydown="checkEnter(event)" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul id="menu" class="hidden">
+    <li><a href="/homepage.html">Home</a></li>
+    <li><a href="/shopspage.html">Shops</a></li>
+    <li><a href="/likedlist.html">Liked List</a></li>
+    <li><a href="/map.html">Map</a></li>
+</ul>
+
+  <div class="container">
+    <header>
+    </header>
+  </div>
+
+  <script src="home.js"></script>
+</body>
+</html>

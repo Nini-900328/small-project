@@ -159,6 +159,7 @@ body {
     text-decoration: none;        /* 移除鏈接的下劃線 */
     border-radius: 15px;           /* 圓角 */
     cursor: pointer;             /* 游標變為手指型 */
+    transition: background-color 0.5s, transform 0.5s, text-shadow 0.5s; /* 增加動畫過渡效果 */
     text-shadow: 1px 1px 1px #3e2c1e, 1px 1px 1px #3e2c1e; /* 文字加粗邊 */
     margin-bottom: 80%;
     font-size: 20px;
