@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
   <title>Cafind-Map</title>
   <link rel="icon" href="./photo/Logoicon2.png">
-  <link rel="stylesheet" href="./homestyle.css">
+  <link rel="stylesheet" href="./homestyle.css"> <!-- 原本的頁面樣式 -->
+  <link rel="stylesheet" href="mapstyle.css"> <!-- 新增的地圖樣式 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"> <!-- 引入 Leaflet 地圖的 CSS -->
 </head>
+
 <body>
   <div class="nav">
     <div class="nav-bar">
@@ -32,13 +36,15 @@
     <li><a href="/shopspage.html">Shops</a></li>
     <li><a href="/likedlist.html">Liked List</a></li>
     <li><a href="/map.html">Map</a></li>
-</ul>
+  </ul>
 
-  <div class="container">
-    <header>
-    </header>
-  </div>
+  <!-- 地圖容器 -->
+  <div id="map"></div>
 
-  <script src="home.js"></script>
+  <!-- 引入外部的 JS -->
+  <script src="home.js"></script> <!-- 原本的功能性腳本 -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Leaflet 地圖庫 -->
+  <script src="map.js"></script> <!-- 新增的地圖 JS 代碼 -->
 </body>
+
 </html>

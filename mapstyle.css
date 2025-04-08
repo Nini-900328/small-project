@@ -1,0 +1,8 @@
+/* mapstyle.css */
+#map {
+    margin-top: 80px; /* 確保地圖位置不會被漢堡選單擋住，調整為漢堡選單的高度 */
+    height: calc(100vh - 80px); /* 讓地圖的高度是整個視窗高度減去漢堡選單的高度 */
+    width: 100%;
+    position: relative; /* 保證地圖容器的定位不會影響其他元素 */
+    z-index: 1; /* 確保地圖層級不會干擾導航條 */
+}
