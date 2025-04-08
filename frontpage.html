@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
     <title>Cafind</title>
-    <link rel="icon" href="./photo/coffeeicon.png">
+    <link rel="icon" href="./photo/Logoicon2.png">
     <link rel="stylesheet" href="./homestyle.css">
 </head>
 
@@ -20,7 +20,8 @@
 
             <!-- 中間：logo -->
             <div class="nav-center">
-                <img style="object-fit: contain;" src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
+                <a href="/frontpage.html"><img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
+                </a>
             </div>
 
             <!-- 右邊：放大鏡-->
@@ -35,7 +36,7 @@
 
     <!-- 隱藏的漢堡選單 -->
     <ul id="menu" class="hidden">
-        <li><a href="#home">Home</a></li>
+        <li><a href="/frontpage.html">Home</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -43,11 +44,12 @@
 
     <div class="container">
         <header>
-            <h1 class="title">Cafind</h1>
+            <h1><a class="filter-button" href="/filter-page">Let's find your kind of café.</a></h1>
         </header>
-        <div>
-            <h2>Find your kind of café.</h2>
-        </div>
+    </div>
+
+    <div id ="recommended-shops">
+
     </div>
 
     <script src="script.js"></script>

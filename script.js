@@ -19,6 +19,3 @@ function toggleMenu() {
     menu.classList.toggle('hidden');
 }
 
-function toggleLogo(){
-    
-}

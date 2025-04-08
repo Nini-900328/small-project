@@ -35,8 +35,8 @@
     object-fit;
     position: relative;
     top: -70px;
-    left: -100px;
-
+    left: -75px;
+    object-fit: contain;
 }
 
 .nav-right {
@@ -74,15 +74,22 @@
     border-radius: 4px;
     border: 2px solid #ccc;
     outline: none;
+    background-color: transparent; /* 讓內部背景色透明 */
 }
 
-.nav a {
-    text-decoration: none;
-    color: #333;
-    background: #f5f5f5;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-family: sans-serif;
+/* 通用 <a> 樣式，移除所有默認樣式 */
+a {
+    text-decoration: none; /* 移除下劃線 */
+    background: transparent; /* 移除背景 */
+    border: none; /* 移除邊框 */
+    padding: 0; /* 移除內邊距 */
+    margin: 0; /* 移除外邊距 */
+}
+
+/* 移除 logo 上的 a 標籤的邊框和背景 */
+.nav-center a {
+    display: inline; /* 使 <a> 元素行內顯示 */
+    padding: 0; /* 確保 logo 沒有內邊距 */
 }
 
 /* 隱藏選單 */
@@ -98,22 +105,29 @@
     position: absolute;
     top: 80px;
     /* 漢堡選單圖示下方 */
-    left: 0;
+    left: 0px;
     /* 讓選單對齊漢堡圖示 */
-    background-color: #f5f5f5;
+    background-color: #d1bfa7;
     border-radius: 4px;
-    width: 200px;
+    border: #d1bfa7 solid 3px;
+    width: 160px;
 }
 
 #menu li {
-    padding: 10px;
+    padding: 5px;
+    border: #d1bfa7 solid 4px;
     text-align: center;
+    background-color: #f2ede8;
+    border-radius: 20px;
+
+
 }
 
-#menu li a {
-    text-decoration: none;
-    color: #333;
-    display: block;
+/* 保留 menu 中的 a 標籤的顯示樣式 */
+#menu a {
+    display: block; /* 確保 menu 中的 <a> 顯示為區塊 */
+    padding: 10px; /* 給 menu 中的 <a> 內邊距 */
+    text-decoration: none; /* 去除下劃線 */
 }
 
 /* 其他樣式保持不變 */
@@ -137,13 +151,22 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-h1,
-h2 {
-    text-align: center;
-    color: #f2ede8;
-    text-shadow:
-        -1px -1px 0 #3e2c1e,
-         1px -1px 0 #3e2c1e,
-        -1px  1px 0 #3e2c1e,
-         2px  2px 0 #3e2c1e; /* 四個方向堆出描邊感 */
+.filter-button {
+    display: inline-block;        /* 讓 <a> 元素像按鈕一樣顯示 */
+    background-color: #6e5843;    /* 按鈕背景顏色 */
+    color: white;                 /* 按鈕文字顏色 */
+    padding: 10px 20px;           /* 按鈕內邊距 */
+    text-decoration: none;        /* 移除鏈接的下劃線 */
+    border-radius: 15px;           /* 圓角 */
+    cursor: pointer;             /* 游標變為手指型 */
+    text-shadow: 1px 1px 1px #3e2c1e, 1px 1px 1px #3e2c1e; /* 文字加粗邊 */
+    margin-bottom: 80%;
+    font-size: 20px;
 }
+
+.filter-button:hover {
+    background-color: #d1bfa7; /* 鼠標懸停時改變背景顏色 */
+    transform: scale(1.1) ; /* 鼠標懸停時原地放大 */
+}
+
+
