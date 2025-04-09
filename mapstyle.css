@@ -1,30 +1,6 @@
-/* mapstyle.css */
 #map {
-    margin-top: 80px; /* 確保地圖位置不會被漢堡選單擋住，調整為漢堡選單的高度 */
-    height: calc(100vh - 80px); /* 讓地圖的高度是整個視窗高度減去漢堡選單的高度 */
-    width: 100%;
-    position: relative; /* 保證地圖容器的定位不會影響其他元素 */
-    z-index: 1; /* 確保地圖層級不會干擾導航條 */
-}
-
-/* Popup 內容外框樣式 */
-.leaflet-popup-content-wrapper {
-    background-color: antiquewhite !important; /* 使用背景顏色 */
-    border: 2.5px solid #a77a55!important; /* 為長方形增加外框 */
-    text-align: center !important; /* 使文字居中 */
-}
-
-/* 調整 popup 小三角形的顏色和外框 */
-.leaflet-popup-tip {
-    background-color: antiquewhite !important; /* 使用與 popup 背景相同的顏色 */
-    border: 3px solid #a77a55 !important; /* 為長方形增加外框 */
-    border-width: 2px !important; /* 增加邊框寬度 */
-}
-
-/* 文字樣式 */
-.leaflet-popup-content {
-    font-family: 'Poppins', sans-serif !important; /* 使用 Poppins 字型 */
-    font-size: 15px !important; /* 字體大小 */
-    color: #a77a55 !important; /* 深棕色文字 */
-    font-weight: bold !important; /* 讓文字變粗 */
-}
+    height: 100vh; /* 確保地圖容器的高度占滿全螢幕 */
+    width: 100%;   /* 寬度占滿全寬 */
+    position: relative;
+  }
+  
