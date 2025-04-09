@@ -26,20 +26,20 @@
 
 .nav-center {
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 70px; /* 固定導覽列的高度 */
     background-color: #d1bfa7;
+    display: flex; /* 使用 flexbox 來對齊內容 */
+    align-items: center; /* 垂直居中對齊圖片 */
+    overflow: hidden; /* 隱藏超出部分的圖片 */
 }
 
 .nav-center img {
-    width: 180px;
-    height: 180px;
-    object-fit;
-    position: relative;
-    top: -70px;
-    left: -75px;
-    object-fit: contain;
+    width: 155px; /* 設定固定寬度 */
+    height: auto; /* 保持圖片的比例 */
+    object-fit: contain; /* 確保圖片不會變形 */
 }
+
 
 .nav-right {
     display: flex;

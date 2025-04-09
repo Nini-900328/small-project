@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <title>Cafind-Shops</title>
     <link rel="icon" href="./photo/Logoicon2.png">
     <link rel="stylesheet" href="./homestyle.css">
@@ -40,94 +41,151 @@
 
     <!-- 咖啡廳選項區塊 -->
     <div class="container">
-        <h1>推薦的咖啡廳</h1>
-
         <div class="coffee-shops">
             <div class="coffee-shop" onclick="showDetails('A')">
-                <h2>咖啡廳 A</h2>
-                <p>這是第一間咖啡廳，提供舒適的氛圍與美味的咖啡。</p>
+                <h2>Laio Coffee <br>西裝店裡的咖啡館</h2>
+                <p>全台唯一把「西裝店」與「咖啡廳」結合在一起的神奇空間，既能試穿高質感男裝，也能坐下來喝杯咖啡。空間設計極具特色，風格沈穩內斂，是一間讓人感到紳士氛圍滿點的新型態咖啡空間。</p>
+                <div class="tags">
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('質感')">質感</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('男士喜愛')">男士喜愛</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
+
+                </div>
             </div>
+
             <div class="coffee-shop" onclick="showDetails('B')">
-                <h2>咖啡廳 B</h2>
-                <p>這是第二間咖啡廳，擁有獨特的裝潢和熱情的服務。</p>
+                <h2>ATC Cafe</h2>
+                <p>充滿設計細節的環境，滿足每個人的不同需求。有專注的獨立空間，一盞檯燈配上溫暖座墊，這裡就是屬於你的一方天地。也有包廂空間，不管是要會議洽談，或是多人數課程講座都可以進行。有多項主食甜點，時刻滿足味蕾需求，從早待到晚都不是問題。
+                </p>
+                <div class="tags">
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('鹹食')">鹹食</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('甜點')">甜點</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('辦公')">辦公</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('讀書')">讀書</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('包廂')">包廂</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('租場')">租場</span>
+                </div>
             </div>
+
             <div class="coffee-shop" onclick="showDetails('C')">
-                <h2>咖啡廳 C</h2>
-                <p>這是第三間咖啡廳，提供安靜的空間讓你放鬆。</p>
+                <h2>青島物語</h2>
+                <p>這間日系復古不限時咖啡廳，前身為餃子店。日式復古的裝潢，每個角落都是巧思，具有年代感的燈具陪伴，好似更能專注在自己的心流之中。</p>
+                <div class="tags">
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('鹹食')">鹹食</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('甜點')">甜點</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('租場')">租場</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('辦公')">辦公</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('讀書')">讀書</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('復古風')">復古風</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('日系風')">日系風</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('不限時')">不限時</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
+                </div>
             </div>
+
             <div class="coffee-shop" onclick="showDetails('D')">
-                <h2>咖啡廳 D</h2>
-                <p>這是第四間咖啡廳，提供創意的飲品與甜點。</p>
+                <h2>Art aNew – Gallery & Cafe’</h2>
+                <p>它是間深夜咖啡廳，也是間酒吧，更是一間藝廊，因此它兼具了妖豔、典雅與溫馨三種氛圍，看似違和，反而以一種奇妙的比例達到了完美的平衡。</p>
+                <div class="tags">
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('鹹食')">鹹食</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('藝術')">藝術</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('酒精')">酒精</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('深夜')">深夜</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('辦公')">辦公</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('讀書')">讀書</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('吸菸區')">吸菸區</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('男士喜愛')">男士喜愛</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('樂團演出')">樂團演出</span>
+
+                </div>
             </div>
+
             <div class="coffee-shop" onclick="showDetails('E')">
-                <h2>咖啡廳 E</h2>
-                <p>這是第五間咖啡廳，具有現代化設計和舒適的環境。</p>
+                <h2>Coffury Studio No.71</h2>
+                <p>灰暗的色調在繁華的都市中看起來格外沈穩，木質傢俱與瓷器像是擁有動人故事的旅者一般神秘，走到店門前，就會被這經歷了風吹雨打的老靈魂所吸引。</p>
+                <div class="tags">
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('鹹食')">鹹食</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('甜點')">甜點</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('酒精')">酒精</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('懷舊風')">懷舊風</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
+                </div>
             </div>
+
             <div class="coffee-shop" onclick="showDetails('F')">
-                <h2>咖啡廳 F</h2>
-                <p>這是第六間咖啡廳，提供親切的服務與寬敞的座位。</p>
+                <h2>Overture序曲</h2>
+                <p>舊時代的質樸痕跡之中，穿插文青感滿滿的小心思，就如同這間店的甜、飲品一樣細膩。店內環境具有文青氣息，使用大量木質傢俱和白色磁磚，並搭配綠色植物。</p>
+                <div class="tags">
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('甜點')">甜點</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('牛奶')">牛奶</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('文青風')">文青風</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('懷舊風')">懷舊風</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('女士喜歡')">女士喜歡</span>
+                    <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
+                </div>
+
             </div>
         </div>
-    </div>
 
-    <!-- 詳細資訊視窗 -->
-    <div id="details-A" class="details">
-        <div class="details-content">
-            <h3>咖啡廳 A 詳細資訊</h3>
-            <p>地址：XXX街道，XXX區</p>
-            <p>電話：XXX-XXXX-XXXX</p>
-            <p>營業時間：9:00 AM - 6:00 PM</p>
-            <button onclick="closeDetails('A')">關閉</button>
+        <!-- 詳細資訊視窗 -->
+        <div id="details-A" class="details">
+            <div class="details-content">
+                <h3>Laio Coffee 西裝店裡的咖啡館</h3>
+                <p>地址：台中市西區精誠五街9號2樓</p>
+                <p>電話：04-23272385</p>
+                <p>營業時間：13:30-21:30</p>
+                <button onclick="closeDetails('A')">X</button>
+            </div>
         </div>
-    </div>
-    <div id="details-B" class="details">
-        <div class="details-content">
-            <h3>咖啡廳 B 詳細資訊</h3>
-            <p>地址：YYY街道，YYY區</p>
-            <p>電話：YYY-YYYY-YYYY</p>
-            <p>營業時間：10:00 AM - 7:00 PM</p>
-            <button onclick="closeDetails('B')">關閉</button>
+        <div id="details-B" class="details">
+            <div class="details-content">
+                <h3>ATC Cafe</h3>
+                <p>地址：台中市南屯區大墩路533號<br>(家樂福一樓)</p>
+                <p>電話：04-23281218</p>
+                <p>營業時間：11:00-22:00</p>
+                <button onclick="closeDetails('B')">X</button>
+            </div>
         </div>
-    </div>
-    <div id="details-C" class="details">
-        <div class="details-content">
-            <h3>咖啡廳 C 詳細資訊</h3>
-            <p>地址：ZZZ街道，ZZZ區</p>
-            <p>電話：ZZZ-ZZZZ-ZZZZ</p>
-            <p>營業時間：8:00 AM - 5:00 PM</p>
-            <button onclick="closeDetails('C')">關閉</button>
+        <div id="details-C" class="details">
+            <div class="details-content">
+                <h3>青島物語</h3>
+                <p>地址：台中市北區青島路一段41號一樓</p>
+                <p>電話：04-22992662</p>
+                <p>營業時間：10:00-18:00<br>(假日休)</p>
+                <button onclick="closeDetails('C')">X</button>
+            </div>
         </div>
-    </div>
-    <div id="details-D" class="details">
-        <div class="details-content">
-            <h3>咖啡廳 D 詳細資訊</h3>
-            <p>地址：AAA街道，AAA區</p>
-            <p>電話：AAA-AAAA-AAAA</p>
-            <p>營業時間：9:00 AM - 6:00 PM</p>
-            <button onclick="closeDetails('D')">關閉</button>
+        <div id="details-D" class="details">
+            <div class="details-content">
+                <h3>Art aNew – Gallery & Cafe’</h3>
+                <p>地址：台中市西區精誠五街32號</p>
+                <p>電話：04-23203590</p>
+                <button onclick="closeDetails('D')">X</button>
+                <p>營業時間：11:00-17:00/19:00-02:00<br>(假日晚休/周二晚休)</p>
+            </div>
         </div>
-    </div>
-    <div id="details-E" class="details">
-        <div class="details-content">
-            <h3>咖啡廳 E 詳細資訊</h3>
-            <p>地址：BBB街道，BBB區</p>
-            <p>電話：BBB-BBBB-BBBB</p>
-            <p>營業時間：10:00 AM - 7:00 PM</p>
-            <button onclick="closeDetails('E')">關閉</button>
+        <div id="details-E" class="details">
+            <div class="details-content">
+                <h3>Coffury Studio No.71</h3>
+                <p>地址：台中市北區忠太西路71號</p>
+                <p>電話：04-22080818</p>
+                <p>營業時間：14:00-00:00<br>(周五休)</p>
+                <button onclick="closeDetails('E')">X</button>
+            </div>
         </div>
-    </div>
-    <div id="details-F" class="details">
-        <div class="details-content">
-            <h3>咖啡廳 F 詳細資訊</h3>
-            <p>地址：CCC街道，CCC區</p>
-            <p>電話：CCC-CCCC-CCCC</p>
-            <p>營業時間：8:00 AM - 5:00 PM</p>
-            <button onclick="closeDetails('F')">關閉</button>
+        <div id="details-F" class="details">
+            <div class="details-content">
+                <h3>Overture序曲</h3>
+                <p>地址：台中市北屯區太原路三段150巷8弄17號</p>
+                <p>電話：04-22338299</p>
+                <p>營業時間：12:00-19:00</p>
+                <button onclick="closeDetails('F')">X</button>
+            </div>
         </div>
-    </div>
 
-    <script src="home.js"></script>
-    <script src="shops.js"></script>
+        <script src="home.js"></script>
+        <script src="shops.js"></script>
 </body>
 
 </html>
