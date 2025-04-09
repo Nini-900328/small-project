@@ -17,39 +17,41 @@ body {
     place-items: center;
     height: 100vh;
     width: 100%;
-    margin-top: 80px;
 }
 
 /* 標題 */
 h1 {
     font-size: 2.5em;
     color: bisque;
-    font-weight: bold; /* 加粗字體 */
-    margin-bottom: 20px;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* 增强阴影效果 */
+    font-weight: bold;
+    margin-top: -40px; /* 調整區塊上邊距，讓區塊上移 */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
 }
-
-
 
 /* 咖啡廳區塊樣式 */
 .coffee-shops {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* 每個區塊間的間距 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行顯示 3 個區塊 */
+    gap: 20px; /* 每個區塊之間的間距 */
+    justify-content: center; /* 中央對齊所有區塊 */
+    width: 100%; /* 讓區塊填滿容器 */
+    max-width: 1200px; /* 設定最大寬度，避免太寬 */
+    margin-top: -200px; /* 調整區塊上邊距，讓區塊上移 */
 }
 
 /* 咖啡廳單一區塊 */
 .coffee-shop {
-    background-color:bisque; /* 這是主題色的顏色，可以根據你的主題調整 */
+    background-color: bisque;
     color: #6e5843;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .coffee-shop:hover {
-    transform: translateY(-10px); /* 當滑鼠懸停時，區塊稍微上升 */
+    transform: translateY(-10px);
 }
 
 /* 咖啡廳名稱 */
@@ -62,4 +64,36 @@ h1 {
 .coffee-shop p {
     font-size: 1em;
     line-height: 1.6;
+}
+
+/* 詳細資訊視窗 */
+.details {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.details-content {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
