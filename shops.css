@@ -1,0 +1,65 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #6e5843;
+}
+
+/* 容器樣式 */
+.container {
+    background-image: url(./photo/background.jpg);
+    background-size: cover;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* 標題 */
+h1 {
+    font-size: 2.5em;
+    color: bisque;
+    font-weight: bold; /* 加粗字體 */
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* 增强阴影效果 */
+}
+
+
+
+/* 咖啡廳區塊樣式 */
+.coffee-shops {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 每個區塊間的間距 */
+}
+
+/* 咖啡廳單一區塊 */
+.coffee-shop {
+    background-color:bisque; /* 這是主題色的顏色，可以根據你的主題調整 */
+    color: #6e5843;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.coffee-shop:hover {
+    transform: translateY(-10px); /* 當滑鼠懸停時，區塊稍微上升 */
+}
+
+/* 咖啡廳名稱 */
+.coffee-shop h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* 咖啡廳描述 */
+.coffee-shop p {
+    font-size: 1em;
+    line-height: 1.6;
+}

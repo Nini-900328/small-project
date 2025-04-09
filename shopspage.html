@@ -3,28 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=3.0">
     <title>Cafind-Shops</title>
     <link rel="icon" href="./photo/Logoicon2.png">
     <link rel="stylesheet" href="./homestyle.css">
+    <link rel="stylesheet" href="./shops.css">
 </head>
 
 <body>
     <div class="nav">
         <div class="nav-bar">
-            <!-- 左邊：漢堡選單圖示 -->
             <div class="nav-left">
                 <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
-                
             </div>
 
-            <!-- 中間：logo -->
             <div class="nav-center">
-                <a href="/homepage.html"><img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
-                </a>
+                <a href="/homepage.html"><img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()"></a>
             </div>
 
-            <!-- 右邊：放大鏡-->
             <div class="nav-right">
                 <img src="./photo/searchicon.png" alt="Search" class="search-icon" onclick="submitSearch()">
                 <div id="search-box" class="search-box">
@@ -42,9 +38,24 @@
         <li><a href="/map.html">Map</a></li>
     </ul>
 
+    <!-- 咖啡廳選項區塊 -->
     <div class="container">
-        <header>
-        </header>
+        <h1>推薦的咖啡廳</h1>
+
+        <div class="coffee-shops">
+            <div class="coffee-shop">
+                <h2>咖啡廳 A</h2>
+                <p>這是第一間咖啡廳，提供舒適的氛圍與美味的咖啡。</p>
+            </div>
+            <div class="coffee-shop">
+                <h2>咖啡廳 B</h2>
+                <p>這是第二間咖啡廳，擁有獨特的裝潢和熱情的服務。</p>
+            </div>
+            <div class="coffee-shop">
+                <h2>咖啡廳 C</h2>
+                <p>這是第三間咖啡廳，提供安靜的空間讓你放鬆。</p>
+            </div>
+        </div>
     </div>
 
     <script src="home.js"></script>
