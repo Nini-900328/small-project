@@ -1,0 +1,83 @@
+:root {
+    --primary-color: #6e5843;  /* 主色 */
+    --secondary-color: #b89363; /* 次色 */
+    --card-background: #f9f9f9; /* 卡片背景色 */
+    --border-color: #ddd;       /* 邊框顏色 */
+    --text-color: #333;         /* 文字顏色 */
+}
+/* 確保容器和標題區域有適當的樣式 */
+.container {
+    margin: 20px;
+}
+
+.group-title {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.favorite-item {
+    padding: 15px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-item h3 {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.favorite-item p {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.favorite-item button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.favorite-item button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 提示訊息 */
+.no-favorites-msg {
+    font-size: 1.2em;
+    color: #6e5843;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 淡出動畫 */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

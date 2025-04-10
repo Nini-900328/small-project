@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
-  <title>Cafind-Liked List</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+  <title>Cafind-Favorites</title>
   <link rel="icon" href="./photo/Logoicon2.png">
   <link rel="stylesheet" href="./homestyle.css">
+  <link rel="stylesheet" href="./favorites.css">
 </head>
+
 <body>
   <div class="nav">
     <div class="nav-bar">
@@ -30,15 +34,22 @@
   <ul id="menu" class="hidden">
     <li><a href="/homepage.html">Home</a></li>
     <li><a href="/shopspage.html">Shops</a></li>
-    <li><a href="/likedlist.html">Liked List</a></li>
+    <li><a href="/favorites.html">Favorites</a></li>
     <li><a href="/map.html">Map</a></li>
-</ul>
+  </ul>
 
   <div class="container">
-    <header>
-    </header>
+    <div class="group-title">
+      <h2>Your Favorite Shops</h2>
+    </div>
+    <div id="favorites-container" class="favorites-list">
+      <!-- 收藏的店鋪項目會動態插入在這裡 -->
+    </div>
+    <p id="no-favorites-msg" class="no-favorites-msg" style="display: none;">No favorite shops yet.</p> <!-- 顯示空的提示 -->
   </div>
 
-  <script src="home.js"></script>
+  <script src="./home.js"></script>
+  <script src="favorites.js"></script>
 </body>
+
 </html>

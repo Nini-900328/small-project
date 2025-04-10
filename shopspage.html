@@ -35,25 +35,24 @@
     <ul id="menu" class="hidden">
         <li><a href="/homepage.html">Home</a></li>
         <li><a href="/shopspage.html">Shops</a></li>
-        <li><a href="/likedlist.html">Liked List</a></li>
+        <li><a href="/favorites.html">Favorites</a></li>
         <li><a href="/map.html">Map</a></li>
     </ul>
 
     <!-- 咖啡廳選項區塊 -->
     <div class="container">
         <div class="coffee-shops">
-            <div class="coffee-shop" onclick="showDetails('A')">
+            <div class="coffee-shop" onclick="showDetails('A')" data-name="Laio Coffee" data-description="全台唯一把「西裝店」與「咖啡廳」結合在一起的神奇空間。">
                 <h2>Laio Coffee <br>西裝店裡的咖啡館</h2>
                 <p>全台唯一把「西裝店」與「咖啡廳」結合在一起的神奇空間，既能試穿高質感男裝，也能坐下來喝杯咖啡。空間設計極具特色，風格沈穩內斂，是一間讓人感到紳士氛圍滿點的新型態咖啡空間。</p>
                 <div class="tags">
-                    <span class="tag" onclick="event.stopPropagation(); goToTag('質感')">質感</span>
-                    <span class="tag" onclick="event.stopPropagation(); goToTag('男士喜愛')">男士喜愛</span>
-                    <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
-
+                  <span class="tag" onclick="event.stopPropagation(); goToTag('質感')">質感</span>
+                  <span class="tag" onclick="event.stopPropagation(); goToTag('男士喜愛')">男士喜愛</span>
+                  <span class="tag" onclick="event.stopPropagation(); goToTag('特色空間')">特色空間</span>
                 </div>
-            </div>
+              </div>
 
-            <div class="coffee-shop" onclick="showDetails('B')">
+            <div class="coffee-shop" onclick="showDetails('B')" data-name="ATC Cafe" data-description="充滿設計細節的環境，滿足每個人的不同需求。">
                 <h2>ATC Cafe</h2>
                 <p>充滿設計細節的環境，滿足每個人的不同需求。有專注的獨立空間，一盞檯燈配上溫暖座墊，這裡就是屬於你的一方天地。也有包廂空間，不管是要會議洽談，或是多人數課程講座都可以進行。有多項主食甜點，時刻滿足味蕾需求，從早待到晚都不是問題。
                 </p>
@@ -67,7 +66,7 @@
                 </div>
             </div>
 
-            <div class="coffee-shop" onclick="showDetails('C')">
+            <div class="coffee-shop" onclick="showDetails('C')"data-name="青島物語" data-description="這間日系復古不限時咖啡廳，前身為餃子店。">
                 <h2>青島物語</h2>
                 <p>這間日系復古不限時咖啡廳，前身為餃子店。日式復古的裝潢，每個角落都是巧思，具有年代感的燈具陪伴，好似更能專注在自己的心流之中。</p>
                 <div class="tags">
@@ -83,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="coffee-shop" onclick="showDetails('D')">
+            <div class="coffee-shop" onclick="showDetails('D')"data-name="Art aNew – Gallery & Cafe’" data-description="是間深夜咖啡廳，也是間酒吧，更是一間藝廊">
                 <h2>Art aNew – Gallery & Cafe’</h2>
                 <p>它是間深夜咖啡廳，也是間酒吧，更是一間藝廊，因此它兼具了妖豔、典雅與溫馨三種氛圍，看似違和，反而以一種奇妙的比例達到了完美的平衡。</p>
                 <div class="tags">
@@ -101,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="coffee-shop" onclick="showDetails('E')">
+            <div class="coffee-shop" onclick="showDetails('E')"data-name="Coffury Studio No.71" data-description="走到店門前，就會被這經歷了風吹雨打的老靈魂所吸引。">
                 <h2>Coffury Studio No.71</h2>
                 <p>灰暗的色調在繁華的都市中看起來格外沈穩，木質傢俱與瓷器像是擁有動人故事的旅者一般神秘，走到店門前，就會被這經歷了風吹雨打的老靈魂所吸引。</p>
                 <div class="tags">
@@ -113,7 +112,7 @@
                 </div>
             </div>
 
-            <div class="coffee-shop" onclick="showDetails('F')">
+            <div class="coffee-shop" onclick="showDetails('F')"data-name="Overture序曲" data-description="舊時代的質樸痕跡之中，穿插文青感滿滿的小心思。">
                 <h2>Overture序曲</h2>
                 <p>舊時代的質樸痕跡之中，穿插文青感滿滿的小心思，就如同這間店的甜、飲品一樣細膩。店內環境具有文青氣息，使用大量木質傢俱和白色磁磚，並搭配綠色植物。</p>
                 <div class="tags">
@@ -130,59 +129,71 @@
 
         <!-- 詳細資訊視窗 -->
         <div id="details-A" class="details">
+            <button id="heart-A" class="like-btn" onclick="toggleFavorite('A')">&#9825;</button>
+            <button onclick="closeDetails('A')">X</button>
             <div class="details-content">
                 <h3>Laio Coffee 西裝店裡的咖啡館</h3>
                 <p>地址：台中市西區精誠五街9號2樓</p>
                 <p>電話：04-23272385</p>
                 <p>營業時間：13:30-21:30</p>
-                <button onclick="closeDetails('A')">X</button>
             </div>
         </div>
+
         <div id="details-B" class="details">
+            <button id="heart-B" class="like-btn" onclick="toggleFavorite('B')">&#9825;</button>
+            <button onclick="closeDetails('B')">X</button>
             <div class="details-content">
                 <h3>ATC Cafe</h3>
                 <p>地址：台中市南屯區大墩路533號<br>(家樂福一樓)</p>
                 <p>電話：04-23281218</p>
                 <p>營業時間：11:00-22:00</p>
-                <button onclick="closeDetails('B')">X</button>
             </div>
         </div>
+
         <div id="details-C" class="details">
+            <button id="heart-C" class="like-btn" onclick="toggleFavorite('C')">&#9825;</button>
+            <button onclick="closeDetails('C')">X</button>
             <div class="details-content">
                 <h3>青島物語</h3>
                 <p>地址：台中市北區青島路一段41號一樓</p>
                 <p>電話：04-22992662</p>
                 <p>營業時間：10:00-18:00<br>(假日休)</p>
-                <button onclick="closeDetails('C')">X</button>
             </div>
         </div>
+
         <div id="details-D" class="details">
+            <button id="heart-D" class="like-btn" onclick="toggleFavorite('D')">&#9825;</button>
+            <button onclick="closeDetails('D')">X</button>
             <div class="details-content">
                 <h3>Art aNew – Gallery & Cafe’</h3>
                 <p>地址：台中市西區精誠五街32號</p>
                 <p>電話：04-23203590</p>
-                <button onclick="closeDetails('D')">X</button>
                 <p>營業時間：11:00-17:00/19:00-02:00<br>(假日晚休/周二晚休)</p>
             </div>
         </div>
+
         <div id="details-E" class="details">
+            <button id="heart-E" class="like-btn" onclick="toggleFavorite('E')">&#9825;</button>
+            <button onclick="closeDetails('E')">X</button>
             <div class="details-content">
                 <h3>Coffury Studio No.71</h3>
                 <p>地址：台中市北區忠太西路71號</p>
                 <p>電話：04-22080818</p>
                 <p>營業時間：14:00-00:00<br>(周五休)</p>
-                <button onclick="closeDetails('E')">X</button>
             </div>
         </div>
+
         <div id="details-F" class="details">
+            <button id="heart-F" class="like-btn" onclick="toggleFavorite('F')">&#9825;</button>
+            <button onclick="closeDetails('F')">X</button>
             <div class="details-content">
                 <h3>Overture序曲</h3>
                 <p>地址：台中市北屯區太原路三段150巷8弄17號</p>
                 <p>電話：04-22338299</p>
                 <p>營業時間：12:00-19:00</p>
-                <button onclick="closeDetails('F')">X</button>
             </div>
         </div>
+
 
         <script src="home.js"></script>
         <script src="shops.js"></script>

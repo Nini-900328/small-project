@@ -19,18 +19,15 @@ body {
     width: 100%;
 }
 
-
-
 /* 咖啡廳區塊樣式 */
 .coffee-shops {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 每行顯示 3 個區塊 */
-    gap: 20px; /* 每個區塊之間的間距 */
-    justify-content: center; /* 中央對齊所有區塊 */
-    width:100%; /* 讓區塊填滿容器 */
-    max-width: 1200px; /* 設定最大寬度，避免太寬 */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
     margin-top: -60px;
-
 }
 
 /* 咖啡廳單一區塊 */
@@ -39,6 +36,7 @@ body {
     color: #6e5843;
     padding: 25px;
     border-radius: 15px;
+    border: #6e5843 solid 4px;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -59,55 +57,71 @@ body {
     line-height: 1.6;
 }
 
+/* 詳細視窗樣式 */
 .details {
-    display: none;  /* 初始隱藏 */
+    display: none;
     position: fixed;
     top: 20%;
     left: 50%;
-    transform: translateX(-50%) scale(0);  /* 初始狀態縮小 */
-    background-color:#fff;
+    transform: translateX(-50%) scale(0);
+    background-color: #fff;
     padding: 20px;
     border-radius: 20px;
     border: #6e5843 2px solid;
     z-index: 1000;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    opacity: 0;  /* 初始隱藏透明 */
+    opacity: 0;
 }
 
 .details.show {
-    transform: translateX(-50%) scale(1);  /* 顯示時放大 */
-    opacity: 1;  /* 顯示時變得不透明 */
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
 }
 
-
-/* 每個 .details 視窗中的按鈕 */
-.details button {
+/* 按鈕統一樣式（愛心與關閉） */
+.details button,
+.details .like-btn {
     position: absolute;
     top: 10px;
-    right: 10px;
-    background: #fff;
+    background: transparent;
     border-radius: 50%;
     border: 0 solid #6e5843;
     width: 30px;
     height: 30px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1001;  /* 確保關閉按鈕在最上層 */
+    z-index: 1001;
 }
 
+/* 關閉按鈕靠右 */
+.details button {
+    right: 10px;
+}
+
+/* 愛心按鈕靠左 */
+.details .like-btn {
+    left: 10px;
+    font-size: 30px;
+    color: #6e5843; /* 初始顏色設為咖啡色 */
+}
+
+/* hover 效果 */
+.details .like-btn:hover,
 .details button:hover {
-    color:red;
+    color: red;
 }
 
+/* 內容區域 */
 .details-content {
-    max-width: 400px;
-    margin: 20px;
+    position: relative;
+    padding: 1rem;
 }
 
+/* 標籤樣式 */
 .tags {
     margin-top: 5px;
 }
@@ -127,6 +141,7 @@ body {
 .tag:hover {
     background-color: #b89363;
 }
+
 .tag.selected {
     background-color: #6e5843;
 }
