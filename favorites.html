@@ -46,10 +46,16 @@
       <!-- 收藏的店鋪項目會動態插入在這裡 -->
     </div>
     <p id="no-favorites-msg" class="no-favorites-msg" style="display: none;">No favorite shops yet.</p> <!-- 顯示空的提示 -->
+    <div class="category-container">
+      <input type="text" id="new-category-name" placeholder="New Category" class="category-name-input">
+      <button onclick="addCategory()">Add Category</button>
+      <div id="categories-list" class="categories-list"></div>
+    </div>
   </div>
 
   <script src="./home.js"></script>
   <script src="favorites.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
 </body>
 
 </html>

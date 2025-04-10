@@ -43,9 +43,8 @@ function checkEnter(event) {
 
 
 
-// 切換選單顯示/隱藏
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('hidden');
+    menu.classList.toggle('show'); // 切換 show 類別來顯示選單
 }
 

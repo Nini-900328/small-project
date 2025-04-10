@@ -99,39 +99,44 @@ a {
     display: none;
 }
 
-/* 漢堡選單樣式 */
 #menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position: absolute;
-    top: 80px;
-    /* 漢堡選單圖示下方 */
+    position: fixed; /* 改成固定在畫面上 */
+    top: 80px; /* 剛好貼在導覽列底部 */
     left: 0px;
-    /* 讓選單對齊漢堡圖示 */
     background-color: #d1bfa7;
-    border-radius: 4px;
-    border: #d1bfa7 solid 3px;
-    width: 160px;
+    border-radius: 10px 10px 20px 20px;
+    border: #d1bfa7 solid 4px;
+    width: 130px;
+    height: 350px;
     z-index: 9999;
+    display: none; /* 預設隱藏 */
 }
 
+#menu.show {
+    display: block;
+}
+
+
+/* 漢堡選單 li 的樣式 */
 #menu li {
-    padding: 5px;
+    padding: 3px;
     border: #d1bfa7 solid 4px;
     text-align: center;
     background-color: #f2ede8;
+    width: 110px;
     border-radius: 20px;
-
-
 }
 
-/* 保留 menu 中的 a 標籤的顯示樣式 */
+/* 保持 menu 中的 a 標籤樣式 */
 #menu a {
-    display: block; /* 確保 menu 中的 <a> 顯示為區塊 */
-    padding: 10px; /* 給 menu 中的 <a> 內邊距 */
-    text-decoration: none; /* 去除下劃線 */
+    display: block;
+    padding: 10px;
+    text-decoration: none;
 }
+
 
 /* 其他樣式保持不變 */
 .container {

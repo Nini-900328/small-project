@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafind-Home</title>
     <link rel="icon" href="./photo/Logoicon2.png">
     <link rel="stylesheet" href="./homestyle.css">
@@ -12,23 +12,18 @@
 <body>
     <div class="nav">
         <div class="nav-bar">
-            <!-- 左邊：漢堡選單圖示 -->
             <div class="nav-left">
-                <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
-                
+                <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()"> <!-- 點擊觸發 toggleMenu -->
             </div>
 
-            <!-- 中間：logo -->
             <div class="nav-center">
-                <a href="/homepage.html"><img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
-                </a>
+                <a href="/homepage.html"><img src="./photo/Logoicon3.png" alt="Logo Icon"></a>
             </div>
 
-            <!-- 右邊：放大鏡-->
             <div class="nav-right">
-                <img src="./photo/searchicon.png" alt="Search" class="search-icon" onclick="submitSearch()">
+                <img src="./photo/searchicon.png" alt="Search" class="search-icon">
                 <div id="search-box" class="search-box">
-                    <input type="text" placeholder="Search..." onkeydown="checkEnter(event)" />
+                    <input type="text" placeholder="Search...">
                 </div>
             </div>
         </div>
