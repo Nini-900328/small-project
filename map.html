@@ -7,7 +7,7 @@
   <title>Cafind-Map</title>
   <link rel="icon" href="./photo/Logoicon2.png">
   <link rel="stylesheet" href="./homestyle.css"> <!-- 原本的頁面樣式 -->
-  <link rel="stylesheet" href="mapstyle.css"> <!-- 新增的地圖樣式 -->
+  <link rel="stylesheet" href="./mapstyle.css"> <!-- 新增的地圖樣式 -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"> <!-- 引入 Leaflet 地圖的 CSS -->
 </head>
 
@@ -18,7 +18,7 @@
         <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
       </div>
       <div class="nav-center">
-        <a href="/homepage.html">
+        <a href="./homepage.html">
           <img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
         </a>
       </div>
@@ -32,19 +32,19 @@
   </div>
 
   <ul id="menu" class="hidden">
-    <li><a href="/homepage.html">Home</a></li>
-    <li><a href="/shopspage.html">Shops</a></li>
-    <li><a href="/favorites.html">Favorites</a></li>
-    <li><a href="/map.html">Map</a></li>
+    <li><a href="./homepage.html">Home</a></li>
+    <li><a href="./shopspage.html">Shops</a></li>
+    <li><a href="./favorites.html">Favorites</a></li>
+    <li><a href="./map.html">Map</a></li>
   </ul>
 
   <!-- 地圖容器 -->
   <div id="map"></div>
 
   <!-- 引入外部的 JS -->
-  <script src="home.js"></script> <!-- 原本的功能性腳本 -->
+  <script src="./home.js"></script> <!-- 原本的功能性腳本 -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Leaflet 地圖庫 -->
-  <script src="map.js"></script> <!-- 新增的地圖 JS 代碼 -->
+  <script src="./map.js"></script> <!-- 新增的地圖 JS 代碼 -->
 </body>
 
 </html>
