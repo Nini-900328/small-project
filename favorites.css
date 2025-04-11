@@ -128,3 +128,74 @@ body {
 .category-item .favorite-item {
     margin-bottom: 10px;
 }
+.favorite-item {
+    position: relative; /* 使它成為定位的參考 */
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-item button {
+    position: absolute; /* 絕對定位 */
+    top: 10px; /* 使它距離上邊緣 10px */
+    right: 10px; /* 使它距離右邊緣 10px */
+    padding: 8px 16px;
+    font-size: 0.9em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.favorite-item button:hover {
+    background-color: var(--secondary-color);
+}
+.group {
+    padding: 15px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.group-title-container {
+    display: flex;
+    justify-content: space-between; /* 把標題和移除按鈕分開 */
+    align-items: center; /* 垂直居中對齊標題和按鈕 */
+}
+
+.group-title {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 0; /* 去掉標題的外邊距，讓它與按鈕對齊 */
+    left: 50px;
+}
+
+.group .remove-group-button {
+    font-size: 0.9em;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.group .remove-group-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.group .favorite-item {
+    margin-bottom: 15px; /* 或你想要的距離，例如 20px */
+}

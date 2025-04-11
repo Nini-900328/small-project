@@ -39,7 +39,7 @@ function createFavoriteElement(shopId, shop) {
   shopElement.innerHTML = `
     <h3>${shop.name}</h3>
     <p>${shop.description}</p>
-    <button onclick="removeFavorite('${shopId}')">Remove</button>
+    <button onclick="removeFavorite('${shopId}')">X</button>
   `;
   shopElement.addEventListener('dragstart', handleDragStart);
   shopElement.addEventListener('dragover', event => event.preventDefault());
@@ -53,7 +53,7 @@ function createGroupElement(title = "New Group") {
   groupElement.innerHTML = `
     <h3 class="group-title" contenteditable="true">${title}</h3>
     <div class="group-items"></div>
-    <button onclick="removeFavoriteGroup(this)">Remove Group</button>
+    <button onclick="removeFavoriteGroup(this)">Remove</button>
   `;
 
   const titleElem = groupElement.querySelector('.group-title');
@@ -183,7 +183,7 @@ function showNewGroupInput() {
 }
 
 function createNewGroup() {
-  const groupName = document.getElementById('new-group-name').value;
+  const groupName = document.getElementById('new-category-name').value;
   if (groupName.trim()) {
     const groupElement = createGroupElement(groupName);
     document.getElementById('favorites-container').appendChild(groupElement);
