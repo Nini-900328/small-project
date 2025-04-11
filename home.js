@@ -1,50 +1,47 @@
-// 檢查是否按下 Enter 鍵來觸發搜尋
-function checkEnter(event) {
+// 搜尋功能：按下 Enter 鍵觸發搜尋
+document.querySelector('#search-box input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         submitSearch();
     }
-}
+});
 
-// 處理搜尋功能
+// 處理搜尋功能：依據名稱或標籤顯示相符的卡片
 function submitSearch() {
-    const searchQuery = document.querySelector('#search-box input').value;
-    if (searchQuery.trim() !== '') {
-        alert('Searching for: ' + searchQuery);
-    }
-}
-// 搜尋功能 - 檢查關鍵字並過濾顯示
-function submitSearch() {
-    const searchTerm = document.querySelector('#search-box input').value.toLowerCase(); // 取得搜尋關鍵字
-    const shops = document.querySelectorAll('.coffee-shop'); // 取得所有咖啡廳卡片
+    const searchTerm = document.querySelector('#search-box input').value.toLowerCase();
+    const shops = document.querySelectorAll('.coffee-shop'); // 卡片 class 請確保是 .coffee-shop
 
     shops.forEach(shop => {
-        const shopName = shop.querySelector('h2').textContent.toLowerCase(); // 取得咖啡廳名稱
-        const tags = shop.querySelectorAll('.tag'); // 取得所有標籤
-        let matchFound = shopName.includes(searchTerm); // 初步匹配名稱
+        const shopName = shop.querySelector('h2')?.textContent.toLowerCase() || '';
+        const tags = shop.querySelectorAll('.tag');
+        let matchFound = shopName.includes(searchTerm);
 
-        // 檢查標籤是否與關鍵字匹配
         tags.forEach(tag => {
             if (tag.textContent.toLowerCase().includes(searchTerm)) {
                 matchFound = true;
             }
         });
 
-        // 根據是否找到匹配的內容顯示或隱藏咖啡廳
         shop.style.display = matchFound ? 'block' : 'none';
     });
 }
 
-// 按下 Enter 鍵觸發搜尋
-function checkEnter(event) {
-    if (event.key === 'Enter') {
-        submitSearch();
-    }
-}
-
-
-
+// 切換漢堡選單顯示
 function toggleMenu() {
     const menu = document.getElementById('menu');
-    menu.classList.toggle('show'); // 切換 show 類別來顯示選單
+    menu.classList.toggle('show');
 }
 
+// 輪播背景圖片功能
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? "1" : "0";
+    });
+}
+
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}, 4000);

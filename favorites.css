@@ -6,19 +6,11 @@
     --text-color: #333;         /* 文字顏色 */
 }
 
-body {
-    background-image: url('./path/to/your/background.jpg'); /* 設置背景圖片 */
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
 .container {
-    margin: 20px;
-    overflow: auto;  /* 使頁面可捲動 */
+    display: flex;
+    flex-direction: column;  /* 保證項目垂直排列 */
+    justify-content: flex-start;  /* 確保元素在頂端 */
+    margin-top: 120px;  /* 根據需要調整頁面頂部距離 */
 }
 
 .group-title {
@@ -93,15 +85,49 @@ body {
     }
 }
 
+
 .category-container {
-    margin-top: 30px;
+    order: -1;  /* 這會將 category-container 排到所有項目的最上方 */
+    margin-top: 30px;  /* 確保沒有額外間隔 */
+    margin-bottom: 25px;
+}
+.category-name-input {
+    width: 150px; /* 調整寬度 */
+    padding: 10px; /* 增加內邊距，讓輸入框內的文字不會靠邊 */
+    font-size: 1em; /* 調整字型大小 */
+    border: 2px solid var(--border-color); /* 邊框顏色 */
+    border-radius: 10px; /* 圓角邊框 */
+    background-color: #f9f9f9; /* 背景顏色 */
+    color: var(--text-color); /* 文字顏色 */
+    outline: none; /* 去掉輸入框的焦點框線 */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 輕微陰影效果 */
+    transition: none; /* 移除過渡效果 */
 }
 
-.category-name-input {
-    width: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
+/* 當輸入框聚焦時 */
+.category-name-input:focus {
+    border-color: var(--border-color); /* 保持原來的邊框顏色 */
+    background-color: #f9f9f9; /* 背景顏色保持不變 */
+    box-shadow: none; /* 移除聚焦時的陰影效果 */
+    font-size: 1em; /* 確保字體大小不變 */
 }
+
+/* 當輸入框被點擊（active）時 */
+.category-name-input:active {
+    background-color: #f9f9f9; /* 保持背景顏色不變 */
+    border-color: var(--border-color); /* 邊框顏色保持不變 */
+    font-size: 1em; /* 字體大小保持一致 */
+    box-shadow: none; /* 移除陰影效果 */
+}
+
+/* 輸入框內的提示文字顏色 */
+.category-name-input::placeholder {
+    color: var(--secondary-color); /* 提示文字顏色 */
+}
+
+
+
+
 
 .categories-list {
     display: flex;
@@ -145,12 +171,10 @@ body {
     right: 10px; /* 使它距離右邊緣 10px */
     padding: 8px 16px;
     font-size: 0.9em;
-    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .favorite-item button:hover {
