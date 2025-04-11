@@ -85,12 +85,12 @@
     }
 }
 
-
 .category-container {
     order: -1;  /* 這會將 category-container 排到所有項目的最上方 */
     margin-top: 30px;  /* 確保沒有額外間隔 */
     margin-bottom: 25px;
 }
+
 .category-name-input {
     width: 150px; /* 調整寬度 */
     padding: 10px; /* 增加內邊距，讓輸入框內的文字不會靠邊 */
@@ -125,10 +125,6 @@
     color: var(--secondary-color); /* 提示文字顏色 */
 }
 
-
-
-
-
 .categories-list {
     display: flex;
     flex-wrap: wrap;
@@ -154,6 +150,7 @@
 .category-item .favorite-item {
     margin-bottom: 10px;
 }
+
 .favorite-item {
     position: relative; /* 使它成為定位的參考 */
     padding: 20px;
@@ -167,9 +164,9 @@
 
 .favorite-item button {
     position: absolute; /* 絕對定位 */
-    top: 10px; /* 使它距離上邊緣 10px */
+    top: 8px; /* 使它距離上邊緣 10px */
     right: 10px; /* 使它距離右邊緣 10px */
-    padding: 8px 16px;
+    padding: 8px 12px;
     font-size: 0.9em;
     color: white;
     border: none;
@@ -180,9 +177,10 @@
 .favorite-item button:hover {
     background-color: var(--secondary-color);
 }
+
 .group {
     padding: 15px;
-    background-color: var(--card-background);
+    background-color:#d1bfa7;
     border-radius: 10px;
     border: 1px solid var(--border-color);
     display: flex;
@@ -202,11 +200,10 @@
     color: var(--primary-color);
     font-weight: bold;
     margin: 0; /* 去掉標題的外邊距，讓它與按鈕對齊 */
-    left: 50px;
 }
 
 .group .remove-group-button {
-    font-size: 0.9em;
+    font-size: 0.8em;
     background-color: var(--primary-color);
     color: white;
     border: none;

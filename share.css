@@ -67,6 +67,7 @@
     border-radius: 4px;
     padding: 5px;
     width: 160px;
+    z-index: 9999;
 }
 
 .search-box input {
@@ -184,3 +185,9 @@ body {
     transform: scale(1.1) ; /* 鼠標懸停時原地放大 */
 }
 
+/* 高亮顯示搜尋結果 */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    color: #000;
+}

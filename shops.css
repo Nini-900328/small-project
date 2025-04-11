@@ -57,13 +57,13 @@ body {
     line-height: 1.6;
 }
 
-/* 詳細視窗樣式 */
+/* 詳細視窗樣式（修正過高內容會溢出的問題） */
 .details {
     display: none;
     position: fixed;
-    top: 20%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
     background-color: #fff;
     padding: 20px;
     border-radius: 20px;
@@ -71,10 +71,12 @@ body {
     z-index: 1000;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     opacity: 0;
+    width: 450px;
+    
 }
-
+/* 顯示時套用動畫 */
 .details.show {
-    transform: translateX(-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
 
@@ -145,3 +147,48 @@ body {
 .tag.selected {
     background-color: #6e5843;
 }
+/* 圖片輪播容器樣式 */
+.image-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .shop-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+/* 修正圖片最大高度以適應彈窗 */
+.shop-images img {
+    max-width: 100%;
+    max-height: 300px;   /* 調小一點，避免撐爆 .details 高度 */
+    object-fit: cover;
+    display: block;
+}
+  
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  button.prev {
+    left: 0;
+  }
+  
+  button.next {
+    right: 0;
+  }
+  
+  /* 當圖片過多時，按鈕要顯示在正確的位置 */
+  button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  

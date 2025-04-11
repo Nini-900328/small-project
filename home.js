@@ -1,47 +1,73 @@
-// 搜尋功能：按下 Enter 鍵觸發搜尋
-document.querySelector('#search-box input').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        submitSearch();
-    }
-});
+// 存放所有圖片的路徑
+const images = [
+    './photo/Liao.jpg',
+    './photo/Liao2.jpg',
+    './photo/Liao3.jpg',
+    './photo/ATC1.jpg',
+    './photo/ATC2.jpg',
+    './photo/ATC3.jpg',
+    './photo/Bluebird1.jpg',
+    './photo/Bluebird2.jpg',
+    './photo/ART1.jpg',
+    './photo/ART2.jpg',
+    './photo/71-1.jpg',
+    './photo/71-2.jpg',
+    './photo/71-3.jpg',
+    './photo/Overture1.jpg',
+    './photo/Overture2.jpg',
+    './photo/Overture3.jpg'
+];
 
-// 處理搜尋功能：依據名稱或標籤顯示相符的卡片
-function submitSearch() {
-    const searchTerm = document.querySelector('#search-box input').value.toLowerCase();
-    const shops = document.querySelectorAll('.coffee-shop'); // 卡片 class 請確保是 .coffee-shop
+// 這個函數會在頁面載入後顯示隨機圖片
+function displayRandomImages() {
+    const container = document.getElementById('slideshow-container');
 
-    shops.forEach(shop => {
-        const shopName = shop.querySelector('h2')?.textContent.toLowerCase() || '';
-        const tags = shop.querySelectorAll('.tag');
-        let matchFound = shopName.includes(searchTerm);
+    // 初始時隨機選擇一張圖片並生成 slide 元素
+    const randomImage = getRandomImage();
+    const slide = document.createElement('div');
+    slide.classList.add('slide');
+    slide.style.backgroundImage = `url('${randomImage}')`;
+    slide.style.opacity = 1; // 顯示初始圖片
+    container.appendChild(slide);
 
-        tags.forEach(tag => {
-            if (tag.textContent.toLowerCase().includes(searchTerm)) {
-                matchFound = true;
-            }
-        });
+    // 每隔 4 秒隨機更換圖片
+    setInterval(() => {
+        // 隨機選擇新圖片
+        const randomImage = getRandomImage();
+        const newSlide = document.createElement('div');
+        newSlide.classList.add('slide');
+        newSlide.style.backgroundImage = `url('${randomImage}')`;
+        newSlide.style.opacity = 0; // 初始時讓新圖片透明
 
-        shop.style.display = matchFound ? 'block' : 'none';
-    });
+        // 顯示新圖片並添加過渡效果
+        container.appendChild(newSlide);
+
+        // 設置過渡效果
+        setTimeout(() => {
+            newSlide.style.transition = 'opacity 1s ease-in-out';
+            newSlide.style.opacity = 1; // 讓新圖片逐漸顯示
+        }, 100);
+
+        // 隱藏舊圖片
+        const slides = container.querySelectorAll('.slide');
+        if (slides.length > 1) {
+            const oldSlide = slides[0];
+            oldSlide.style.transition = 'opacity 1s ease-in-out';
+            oldSlide.style.opacity = 0; // 讓舊圖片逐漸隱藏
+
+            // 刪除舊圖片
+            setTimeout(() => {
+                oldSlide.remove();
+            }, 1000); // 在過渡後 1 秒刪除舊圖片
+        }
+    }, 5000);
 }
 
-// 切換漢堡選單顯示
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('show');
+// 隨機選擇圖片的函數
+function getRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    return images[randomIndex];
 }
 
-// 輪播背景圖片功能
-let currentSlide = 0;
-const slides = document.querySelectorAll(".slide");
-
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.opacity = i === index ? "1" : "0";
-    });
-}
-
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}, 4000);
+// 頁面載入完成後開始顯示圖片
+window.onload = displayRandomImages;

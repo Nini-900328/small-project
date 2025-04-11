@@ -12,33 +12,9 @@
 </head>
 
 <body class="background-cover">
-  <div class="nav">
-    <div class="nav-bar">
-      <div class="nav-left">
-        <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
-      </div>
-      <div class="nav-center">
-        <a href="./homepage.html">
-          <img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
-        </a>
-      </div>
-      <div class="nav-right">
-        <img src="./photo/searchicon.png" alt="Search" class="search-icon" onclick="submitSearch()">
-        <div id="search-box" class="search-box">
-          <input type="text" placeholder="Search..." onkeydown="checkEnter(event)" />
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  <div id="shared-nav"></div>
 
-    <!-- 隱藏的漢堡選單 -->
-    <ul id="menu" class="hidden">
-      <li><a href="./login.html">Log In</a></li>
-      <li><a href="./homepage.html">Home</a></li>
-      <li><a href="./shopspage.html">Shops</a></li>
-      <li><a href="./favorites.html">Favorites</a></li>
-      <li><a href="./map.html">Map</a></li>
-  </ul>
 
   <div class="container">
     <div id="favorites-container" class="favorites-list">
@@ -52,8 +28,8 @@
     </div>
   </div>
 
-  <script src="./home.js"></script>
   <script src="./favorites.js"></script>
+  <script src="./share.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
 </body>
 
