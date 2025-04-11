@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <title>Cafind</title>
+    <link rel="icon" href="./photo/Logoicon2.png">
+    <link rel="stylesheet" href="./homestyle.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-bar">
+            <div class="nav-left">
+                <img src="./photo/hamicon.png" alt="Menu Icon" onclick="toggleMenu()">
+            </div>
+            <div class="nav-center">
+                <a href="./homepage.html">
+                    <img src="./photo/Logoicon3.png" alt="Logo Icon" onclick="toggleLogo()">
+                </a>
+            </div>
+            <div class="nav-right">
+                <img src="./photo/searchicon.png" alt="Search" class="search-icon" onclick="submitSearch()">
+                <div id="search-box" class="search-box">
+                    <input type="text" placeholder="Search..." onkeydown="checkEnter(event)" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 隱藏的漢堡選單 -->
+    <ul id="menu" class="hidden">
+        <li><a href="./login.html">Log In</a></li>
+        <li><a href="./homepage.html">Home</a></li>
+        <li><a href="./shopspage.html">Shops</a></li>
+        <li><a href="./favorites.html">Favorites</a></li>
+        <li><a href="./map.html">Map</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="login-container">
+            <form class="login-box">
+                <h2>登入 Cafind</h2>
+                <input type="email" placeholder="電子郵件" required />
+                <input type="password" placeholder="密碼 (至少6位)" pattern=".{6,}" required />
+                <button type="submit">登入</button>
+                <div class="login-links">
+                    <a href="#">忘記密碼？</a>
+                    <a href="#">註冊帳號</a>
+                </div>
+            </form>
+            <div class="social-login">
+                <p>或使用社群帳號登入</p>
+                <div class="social-buttons">
+                    <button class="google-login-button">
+                        <img src="./photo/google icon.png" alt="Google Icon" />Google
+                    </button>
+                    <button class="facebook-login-button">
+                        <img src="./photo/facebook.png" alt="Facebook Icon" />Facebook
+                    </button>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+
+    <script src="./home.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+
+</body>
+
+</html>

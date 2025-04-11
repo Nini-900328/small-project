@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: #f5f5f5; /* 頁面的背景顏色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color:#f1e3d3;
+    padding: 2.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-top: -10px;
+    color: #5c3a21;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .login-box input {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    align-items: center; /* 水平置中 */
+    flex-direction: column;
+  }
+  
+  .login-box button {
+    margin-top: 20px;
+    
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    padding: 0.5rem;
+    background-color: #7b4b2a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-box button:hover {
+    background-color: #5c3a21;
+  }
+  
+  .login-links {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .login-links a {
+    display: inline-block;
+    margin: 0.25rem;
+    color: #7b4b2a;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .login-links a:hover {
+    text-decoration: underline;
+  }
+  .social-login {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+  
+  .social-login p {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center; /* 使按鈕置中對齊 */
+    width: 100%;
+    gap: 1rem; /* 設定按鈕之間的間距 */
+    align-items: center;
+}
+
+.google-login-button,
+.facebook-login-button {
+    margin-top: 15px;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-family: "Noto Sans TC", sans-serif;
+    width: 35%; /* 保持相同寬度 */
+    box-sizing: border-box; /* 確保 padding 不會影響寬度 */
+}
+
+.google-login-button {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.facebook-login-button {
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.google-login-button img,
+.facebook-login-button img {
+    width: 18px;
+    height: 18px;
+}
+
+.google-login-button:hover,
+.facebook-login-button:hover {
+    background-color: #ccc; /* hover 效果 */
+    color: black;
+}
