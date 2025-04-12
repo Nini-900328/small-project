@@ -1,6 +1,6 @@
 /* 基本樣式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', 'Times New Roman', 'Palatino Linotype', serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -17,6 +17,20 @@ body {
     place-items: center;
     height: 100vh;
     width: 100%;
+    position: relative; /* 讓遮罩層在這裡顯示 */
+
+}
+
+/* 添加遮罩層，這個遮罩會在容器區域上 */
+.container::before {
+    content: ''; /* 必須為空內容 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* 這樣只會覆蓋下半部分 */
+    background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩層 */
+    z-index: 0; /* 保證遮罩層在背景下方 */
 }
 
 /* 咖啡廳區塊樣式 */
@@ -28,11 +42,12 @@ body {
     width: 100%;
     max-width: 1200px;
     margin-top: -60px;
+    z-index: 1;
 }
 
 /* 咖啡廳單一區塊 */
 .coffee-shop {
-    background-color: bisque;
+    background-color:#FAEBD7;
     color: #6e5843;
     padding: 25px;
     border-radius: 15px;
@@ -64,7 +79,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background-color: #fff;
+    background: color #d9c6b5;
     padding: 20px;
     border-radius: 20px;
     border: #6e5843 2px solid;
@@ -132,7 +147,7 @@ body {
     display: inline-block;
     background-color: #d2b48c;
     color: white;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 5px 10px;
     margin: 3px 3px 0 0;
     border-radius: 20px;

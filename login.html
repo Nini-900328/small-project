@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scale=yes, minimum-scale=1.0, maximum-scale=3.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
     <title>Cafind</title>
     <link rel="icon" href="./photo/Logoicon2.png">
     <link rel="stylesheet" href="./share.css">
     <link rel="stylesheet" href="./login.css">
 </head>
-
 <body class="background-cover">
     
     <div id="shared-nav"></div>
-
 
     <div class="container">
         <div class="login-container">
@@ -39,16 +35,47 @@
                     </button>
                 </div>
             </div>
-            
-
-
         </div>
     </div>
+    
+    <!-- 引入 Firebase SDK 並設定為模組化 -->
+    <script type="module">
+        // 初始化 Firebase
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
+        import { getAuth, GoogleAuthProvider, signInWithPopup } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
+        
+        const firebaseConfig = {
+            apiKey: "你的API",
+            authDomain: "你的domain",
+            // 其他配置項目
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // Google 登入
+        function loginWithGoogle() {
+            const provider = new GoogleAuthProvider();
+            signInWithPopup(auth, provider)
+                .then(result => {
+                    const user = result.user;
+                    console.log("登入成功：", user.displayName);
+                    // 可以導向首頁或存資料
+                }).catch(error => {
+                    console.error("登入錯誤：", error.message);
+                });
+        }
+
+        // 當用戶點擊 Google 登入按鈕時觸發
+        document.querySelector('.google-login-button').addEventListener('click', loginWithGoogle);
+    </script>
+
+    <!-- 這裡移除多餘的 Firebase SDK 引入 -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script> -->
 
     <script src="./share.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js"></script>
+    <script src="./login.js" type="module"></script> <!-- 記得這裡加上 type="module" -->
 
 </body>
-
 </html>

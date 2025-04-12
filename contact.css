@@ -1,0 +1,120 @@
+/* 全局設置 */
+body {
+  margin: 0;
+  padding: 0;
+  position: relative; /* 讓偽元素可以定位 */
+  background: url('./photo/background2.jpg') no-repeat center 70% fixed;
+  background-size: cover;
+  color: #333; /* 主文字顏色 */
+  overflow: hidden; /* 禁止頁面滾動 */
+  font-family: 'Georgia', 'Times New Roman', 'Palatino Linotype', serif;
+}
+
+/* 添加遮罩層 */
+body::before {
+  content: ''; /* 必須為空內容 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩層 */
+  z-index: -1; /* 保證遮罩層在背景圖片下方 */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #fff;
+  margin-top: 50px;
+}
+
+/* 頁面容器 */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 標題 */
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ddd;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* 聯絡表單 */
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+  padding: 30px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* 表單欄位 */
+.contact-form label {
+  display: block;
+  font-size: 1.1em;
+  margin: 10px 0 5px;
+  color: #444;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  background-color: #4CAF50; /* 按鈕顏色 */
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  text-align: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+/* 屏幕較小時的響應式設計 */
+@media (max-width: 600px) {
+  .contact-form {
+      width: 90%;
+  }
+
+  .contact-form h2 {
+      font-size: 1.8em;
+  }
+}

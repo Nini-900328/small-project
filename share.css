@@ -5,7 +5,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;  /* 保持這個層級不變 */
+    z-index: 1000;
+    /* 保持這個層級不變 */
 }
 
 .nav-bar {
@@ -14,8 +15,10 @@
     align-items: center;
     width: 100%;
     padding: auto;
-    position: relative; /* 確保這個元素能夠使用 z-index */
-    z-index: 9999; /* 確保在地圖等元素上層顯示 */
+    position: relative;
+    /* 確保這個元素能夠使用 z-index */
+    z-index: 9999;
+    /* 確保在地圖等元素上層顯示 */
 }
 
 .nav-left img {
@@ -27,17 +30,24 @@
 .nav-center {
     justify-content: center;
     width: 100%;
-    height: 70px; /* 固定導覽列的高度 */
+    height: 70px;
+    /* 固定導覽列的高度 */
     background-color: #d1bfa7;
-    display: flex; /* 使用 flexbox 來對齊內容 */
-    align-items: center; /* 垂直居中對齊圖片 */
-    overflow: hidden; /* 隱藏超出部分的圖片 */
+    display: flex;
+    /* 使用 flexbox 來對齊內容 */
+    align-items: center;
+    /* 垂直居中對齊圖片 */
+    overflow: hidden;
+    /* 隱藏超出部分的圖片 */
 }
 
 .nav-center img {
-    width: 155px; /* 設定固定寬度 */
-    height: auto; /* 保持圖片的比例 */
-    object-fit: contain; /* 確保圖片不會變形 */
+    width: 155px;
+    /* 設定固定寬度 */
+    height: auto;
+    /* 保持圖片的比例 */
+    object-fit: contain;
+    /* 確保圖片不會變形 */
 }
 
 
@@ -77,22 +87,30 @@
     border-radius: 4px;
     border: 2px solid #ccc;
     outline: none;
-    background-color: transparent; /* 讓內部背景色透明 */
+    background-color: transparent;
+    /* 讓內部背景色透明 */
 }
 
 /* 通用 <a> 樣式，移除所有默認樣式 */
 a {
-    text-decoration: none; /* 移除下劃線 */
-    background: transparent; /* 移除背景 */
-    border: none; /* 移除邊框 */
-    padding: 0; /* 移除內邊距 */
-    margin: 0; /* 移除外邊距 */
+    text-decoration: none;
+    /* 移除下劃線 */
+    background: transparent;
+    /* 移除背景 */
+    border: none;
+    /* 移除邊框 */
+    padding: 0;
+    /* 移除內邊距 */
+    margin: 0;
+    /* 移除外邊距 */
 }
 
 /* 移除 logo 上的 a 標籤的邊框和背景 */
 .nav-center a {
-    display: inline; /* 使 <a> 元素行內顯示 */
-    padding: 0; /* 確保 logo 沒有內邊距 */
+    display: inline;
+    /* 使 <a> 元素行內顯示 */
+    padding: 0;
+    /* 確保 logo 沒有內邊距 */
 }
 
 /* 隱藏選單 */
@@ -104,16 +122,19 @@ a {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    position: fixed; /* 改成固定在畫面上 */
-    top: 80px; /* 剛好貼在導覽列底部 */
+    position: fixed;
+    /* 改成固定在畫面上 */
+    top: 80px;
+    /* 剛好貼在導覽列底部 */
     left: 0px;
     background-color: #d1bfa7;
     border-radius: 10px 10px 20px 20px;
     border: #d1bfa7 solid 4px;
     width: 130px;
-    height: 350px;
+    height: 320px;
     z-index: 9999;
-    display: none; /* 預設隱藏 */
+    display: none;
+    /* 預設隱藏 */
 }
 
 #menu.show {
@@ -133,9 +154,15 @@ a {
 
 /* 保持 menu 中的 a 標籤樣式 */
 #menu a {
-    display: block;
+    display: flex;
+    /* 使用 flexbox 來進行對齊 */
+    justify-content: center;
+    /* 水平置中 */
+    align-items: center;
+    /* 垂直置中 */
     padding: 10px;
     text-decoration: none;
+    height: 18px;
 }
 
 
@@ -163,26 +190,41 @@ body {
     min-height: 100vh;
     display: grid;
     place-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+* {
+    font-family: inherit;
 }
 
 .filter-button {
-    display: inline-block;        /* 讓 <a> 元素像按鈕一樣顯示 */
-    background-color: #6e5843;    /* 按鈕背景顏色 */
-    color: white;                 /* 按鈕文字顏色 */
-    padding: 10px 20px;           /* 按鈕內邊距 */
-    text-decoration: none;        /* 移除鏈接的下劃線 */
-    border-radius: 15px;           /* 圓角 */
-    cursor: pointer;             /* 游標變為手指型 */
-    transition: background-color 0.5s, transform 0.5s, text-shadow 0.5s; /* 增加動畫過渡效果 */
-    text-shadow: 1px 1px 1px #3e2c1e, 1px 1px 1px #3e2c1e; /* 文字加粗邊 */
+    display: inline-block;
+    /* 讓 <a> 元素像按鈕一樣顯示 */
+    background-color: #6e5843;
+    /* 按鈕背景顏色 */
+    color: white;
+    /* 按鈕文字顏色 */
+    padding: 10px 20px;
+    /* 按鈕內邊距 */
+    text-decoration: none;
+    /* 移除鏈接的下劃線 */
+    border-radius: 15px;
+    /* 圓角 */
+    cursor: pointer;
+    /* 游標變為手指型 */
+    transition: background-color 0.5s, transform 0.5s, text-shadow 0.5s;
+    /* 增加動畫過渡效果 */
+    text-shadow: 1px 1px 1px #3e2c1e, 1px 1px 1px #3e2c1e;
+    /* 文字加粗邊 */
     margin-bottom: 80%;
     font-size: 20px;
 }
 
 .filter-button:hover {
-    background-color: #d1bfa7; /* 鼠標懸停時改變背景顏色 */
-    transform: scale(1.1) ; /* 鼠標懸停時原地放大 */
+    background-color: #d1bfa7;
+    /* 鼠標懸停時改變背景顏色 */
+    transform: scale(1.1);
+    /* 鼠標懸停時原地放大 */
 }
 
 /* 高亮顯示搜尋結果 */

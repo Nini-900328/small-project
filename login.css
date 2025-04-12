@@ -7,6 +7,19 @@ body {
     align-items: center;
     height: 100vh;
   }
+
+
+/* 添加遮罩層 */
+body::before {
+  content: ''; /* 必須為空內容 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩層 */
+  z-index: -1; /* 保證遮罩層在背景圖片下方 */
+}
   
   .login-container {
     background-color:#f1e3d3;

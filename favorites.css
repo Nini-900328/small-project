@@ -1,17 +1,42 @@
-:root {
-    --primary-color: #6e5843;  /* 主色 */
-    --secondary-color: #b89363; /* 次色 */
-    --card-background: #f9f9f9; /* 卡片背景色 */
-    --border-color: #ddd;       /* 邊框顏色 */
-    --text-color: #333;         /* 文字顏色 */
+ 
+ html, body {
+    height: 100vh;
+    overflow: hidden; /* 禁止滾動 */
 }
+
+body {
+    font-family: 'Georgia', 'Times New Roman', 'Palatino Linotype', serif;
+}
+
+ 
+ /* 添加遮罩層 */
+  body::before {
+    content: ''; /* 必須為空內容 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 半透明黑色遮罩層 */
+    z-index: 0;
+}
+
+  :root {
+    --primary-color: #7c6752;      /* 主色：柔和的拿鐵棕 */
+    --secondary-color: #d2b99a;    /* 次色：溫柔的奶米金 */
+    --card-background: #e9e1d8;    /* 卡片背景：比 #f2ece5 深一點，但比文字顏色淺 */
+    --border-color: #d8cfc5;       /* 邊框顏色：介於卡片與主背景之間 */
+    --text-color: #5b4c3d;         /* 文字：帶點咖啡感，與背景有層次 */
+  }
+  
 
 .container {
     display: flex;
     flex-direction: column;  /* 保證項目垂直排列 */
     justify-content: flex-start;  /* 確保元素在頂端 */
     margin-top: 120px;  /* 根據需要調整頁面頂部距離 */
+    z-index: 1;
 }
+
+
 
 .group-title {
     font-size: 1.5em;
@@ -180,7 +205,7 @@
 
 .group {
     padding: 15px;
-    background-color:#d1bfa7;
+    background-color:#d0c0b0;
     border-radius: 10px;
     border: 1px solid var(--border-color);
     display: flex;

@@ -107,3 +107,35 @@ function closeDetails(shopId) {
     updateFavoriteHeart(shopId); // 更新愛心狀態
   }, 300); // 動畫時間結束後才隱藏
 }
+
+function filterByTag(tag) {
+  const shops = document.querySelectorAll('.coffee-shop');
+  shops.forEach(shop => {
+      const tags = shop.querySelectorAll('.tag');
+      let hasTag = false;
+
+      tags.forEach(t => {
+          if (t.textContent.replace('#', '') === tag) {
+              hasTag = true;
+          }
+      });
+
+      shop.style.display = hasTag ? 'block' : 'none';
+  });
+}
+
+
+function goToTag(tag) {
+  const encodedTag = encodeURIComponent(tag);
+  window.location.href = `shopspage.html?tag=${encodedTag}`;
+}
+
+
+window.onload = function () {
+const params = new URLSearchParams(window.location.search);
+const tag = params.get('tag');
+
+if (tag) {
+    filterByTag(tag);
+}
+};
