@@ -15,27 +15,26 @@
     <div class="container" id="slideshow-container">
         <!-- 可加入圖片輪播等功能 -->
         <header>
-            <h1>聯絡我們</h1>
-            <p>有任何問題或建議，請填寫以下表單，我們會盡快回覆您。</p>
+            <!-- 聯絡表單 -->
+            <section class="contact-form">
+                <h2>聯絡我們</h2>
+                <form id="contact-form" method="POST">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">電子郵件：</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">訊息：</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">送出</button>
+                </form>
+            </section>
         </header>
     </div>
 
-    <!-- 聯絡表單 -->
-    <section class="contact-form">
-        <h2>填寫聯絡表單</h2>
-        <form id="contact-form" method="POST">
-            <label for="name">姓名：</label>
-            <input type="text" id="name" name="name" required>
 
-            <label for="email">電子郵件：</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">訊息：</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit">送出</button>
-        </form>
-    </section>
 
     <!-- 共享導航 -->
     <div id="shared-nav"></div>
